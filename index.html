@@ -84,6 +84,19 @@
               <!-- gold dome -->
               <a-entity geometry="primitive: sphere; radius: 6" material="src: #goldDome; repeat: 5 5" color="#ebbf2a" position="0 6 0"></a-entity>
 
+              <!-- ก้่านเสาด้านบน -->
+              <a-entity rotation="0 122.5 0" position="0 13 0">
+                <a-entity position="0 -0.5 0" geometry="primitive: cone; height: 2.5; radiusBottom: 0.1; radiusTop: 0.015" material="color: #fecc2f"></a-entity>
+
+                <a-sphere position="0 -0.95 0" radius="0.15" material="side: double; color: #fecc2f"></a-sphere>
+                <a-sphere position="0 -0.5 0" radius="0.1" material="side: double; color: #fecc2f"></a-sphere>
+                <a-sphere position="0 -0.3 0" radius="0.2" material="side: double; color: #fecc2f"></a-sphere>
+                <a-sphere position="0 0.35 0" radius="0.1" material="side: double; color: #fecc2f"></a-sphere>
+
+                <a-torus position="0 0.92 0" color="#fecc2f" radius="0.15" radius-tubular="0.015"></a-torus>
+
+              </a-entity>
+
               <!-- wall -->
               <!-- gate object side 1 front door -->
               <a-entity rotation="0 22.5 0" position="0.125 0 8.8" shadow="cast: true">
