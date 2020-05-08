@@ -6,491 +6,543 @@
 </head>
 <body>
     <assets>
+        <img id="sky360" crossorigin="anonymous" src="https://i.imgur.com/2xzTQMx.jpg" />
         <img id="goldDome" crossorigin="anonymous" src="https://i.imgur.com/8Cf2YfH.jpg" />
         <img id="blueBrickDome" crossorigin="anonymous" src="https://i.imgur.com/T9q3HI2.jpg" />
         <img id="window" crossorigin="anonymous" src="https://i.imgur.com/PjtUUdT.jpg" />
         <img id="whiteBrick" crossorigin="anonymous" src="https://i.imgur.com/HpIHL2B.jpg" />
-        <img id="ground" crossorigin="anonymous" src="https://i.imgur.com/bVmouHi.jpg" />
+        <img id="ground" crossorigin="anonymous" src="https://i.imgur.com/E0rYPsw.jpg" />
         <img id="topBlock" crossorigin="anonymous" src="https://i.imgur.com/XUGDkbD.jpg" />
+        <img id="door" crossorigin="anonymous" src="https://i.imgur.com/949l23x.jpg" />
     </asset>
 
-    <!-- Overall Maps -->
     <a-scene shadow="type: pcfsoft">
-        <a-sky color="#fff"></a-sky>
-        <a-entity rotation="0 22.5 0" position="6.225 0 15.025">
+        <a-sky color="#fff" material="src: #sky360"></a-sky>
+        <a-entity rotation="0 22.5 0" position="6.225 5 15.025">
             <a-camera position="0 0 0"></a-camera>
         </a-entity>
 
-        <!-- Dome of the rock -->
-        <a-entity position="0 0 0" shadow="cast: true">
-            <!-- Base bottom -->
-            <a-entity geometry="primitive: cylinder; height: 3; radius: 9; openEnded: true; segmentsHeight: 1; segmentsRadial: 8;" material="src: #whiteBrick; repeat: 13 3; side: double; wireframe: false; transparent: true;" position="0 0 0"></a-entity>
-
-            <!-- 8 pillar bottom -->
-            <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 45 0" position="0 0 8.8" depth="0.68" height="3" width="0.68" color="#fff"></a-box>
-            <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 45 0" position="0 0 -8.8" depth="0.68" height="3" width="0.68" color="#fff"></a-box>
-            <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 45 0" position="8.8 0 0" depth="0.68" height="3" width="0.68" color="#fff"></a-box>
-            <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 45 0" position="-8.8 0 0" depth="0.68" height="3" width="0.68" color="#fff"></a-box>
-            <a-box material="src: #whiteBrick; repeat: 1 4;" position="6.225 0 6.225" depth="0.68" height="3" width="0.68" color="#fff"></a-box>
-            <a-box material="src: #whiteBrick; repeat: 1 4;" position="-6.225 0 6.225" depth="0.68" height="3" width="0.68" color="#fff"></a-box>
-            <a-box material="src: #whiteBrick; repeat: 1 4;" position="6.225 0 -6.225" depth="0.68" height="3" width="0.68" color="#fff"></a-box>
-            <a-box material="src: #whiteBrick; repeat: 1 4;" position="-6.225 0 -6.225" depth="0.68" height="3" width="0.68" color="#fff"></a-box>
-
-            <!-- Base top -->
-            <a-entity geometry="primitive: cylinder; height: 3; radiusTubular: 3; radius: 9; openEnded: true; segmentsHeight: 1; segmentsRadial: 8;" material="src: #blueBrickDome; repeat: 48 5; side: double; wireframe: false; transparent: true;" position="0 3 0"></a-entity>
-
-            <!-- 8 pillar top -->
-            <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 45 0" position="0 3 8.8" depth="0.68" height="3" width="0.68"></a-box>
-            <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 45 0" position="0 3 -8.8" depth="0.68" height="3" width="0.68"></a-box>
-            <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 45 0" position="8.8 3 0" depth="0.68" height="3" width="0.68"></a-box>
-            <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 45 0" position="-8.8 3 0" depth="0.68" height="3" width="0.68"></a-box>
-            <a-box material="src: #blueBrickDome; repeat: 1 4;" position="6.225 3 6.225" depth="0.68" height="3" width="0.68"></a-box>
-            <a-box material="src: #blueBrickDome; repeat: 1 4;" position="-6.225 3 6.225" depth="0.68" height="3" width="0.68"></a-box>
-            <a-box material="src: #blueBrickDome; repeat: 1 4;" position="6.225 3 -6.225" depth="0.68" height="3" width="0.68"></a-box>
-            <a-box material="src: #blueBrickDome; repeat: 1 4;" position="-6.225 3 -6.225" depth="0.68" height="3" width="0.68"></a-box>
-
-            <!-- Top of the Dome -->
-            <!-- base top -->
-            <a-entity geometry="primitive: cylinder; radius: 8.99; height: 0.1; segmentsHeight: 1; segmentsRadial: 8;" material="src: #blueBrickDome; repeat: 91 1; side: double; wireframe: false; transparent: true;" position="0 4 0" shadow="cast: false; receive: true;"></a-entity>
-
-            <!-- 4 pillar top -->
-            <a-box material="src: #topBlock; repeat: 1 1;" rotation="0 22.5 0" position="-4.99581 5.5 2.0698125" depth="1.5" height="3" width="1.5"></a-box>
-            <a-box material="src: #topBlock; repeat: 1 1;" rotation="0 22.5 0" position="4.99581 5.5 -2.0698125" depth="1.5" height="3" width="1.5"></a-box>
-            <a-box material="src: #topBlock; repeat: 1 1;" rotation="0 22.5 0" position="2.0698125 5.5 4.99581" depth="1.5" height="3" width="1.5"></a-box>
-            <a-box material="src: #topBlock; repeat: 1 1;" rotation="0 22.5 0" position="-2.0698125 5.5 -4.99581" depth="1.5" height="3" width="1.5"></a-box>
-
-            <!-- top bar -->
-            <a-entity geometry="primitive: cylinder; radius: 6; height: 3;" material="src: #blueBrickDome; repeat: 20 12; side: double; wireframe: false; transparent: true;" position="0 5.5 0" shadow="cast: false; receive: true;"></a-entity>
-
-            <!-- base of gold dome plate -->
-            <a-entity geometry="primitive: cylinder; radius: 6.25; height: 0.1" material="src: #goldDome; repeat: 3 12; side: double; wireframe: false; transparent: true;" position="0 7.05 0" shadow="cast: false; receive: true;"></a-entity>
-            <!-- gold dome -->
-            <a-entity geometry="primitive: sphere; radius: 6" material="src: #goldDome; repeat: 5 5" color="#ebbf2a" position="0 6 0"></a-entity>
-
-            <!-- wall -->
-            <!-- gate object side 1 -->
-            <a-entity rotation="0 22.5 0" position="0.125 0 8.8" shadow="cast: true">
-                <!-- top bar -->
-                <a-box material="src: #blueBrickDome; repeat: 4 3;" rotation="0 0 0" position="3.255 4 0.125" depth="0.5" height="1" width="7.01"></a-box>
-
-                <!-- pillar 1 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="0 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-
-                <!-- center wall -->
-                <!-- bottom -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0.99 0 0" depth="0.5" height="3" width="1.49"></a-box>
-                <!-- middle -->
-                <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="0.99 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
-
-                <!-- pillar 2 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="1.98 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="1.98 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-
-                <!-- WALL 1.2 -->
-
-                <!-- center wall -->
-                <!-- bottom -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="3.25 0 0" depth="0.5" height="3" width="2.04"></a-box>
-                <!-- middle -->
-                <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="3.25 2.5 0" depth="0.5" height="2" width="2.04"></a-box>
-
-                <!-- pillar 3 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="4.52 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="4.52 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-
-                <!-- WALL 1.3 -->
-
-                <!-- center wall -->
-                <!-- bottom -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="5.52 0 0" depth="0.5" height="3" width="1.49"></a-box>
-                <!-- middle -->
-                <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="5.52 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
-
-                <!-- pillar 4 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="6.51 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="6.51 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-            </a-entity>
-
-            <!-- gate object side 2 -->
-            <a-entity rotation="0 202.5 0" position="-0.125 0 -8.8" shadow="cast: true">
-                <!-- top bar -->
-                <a-box material="src: #blueBrickDome; repeat: 4 3;" rotation="0 0 0" position="3.255 4 0.125" depth="0.5" height="1" width="7.01"></a-box>
-
-                <!-- pillar 1 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="0 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-
-                <!-- center wall -->
-                <!-- bottom -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0.99 0 0" depth="0.5" height="3" width="1.49"></a-box>
-                <!-- middle -->
-                <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="0.99 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
-
-                <!-- pillar 2 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="1.98 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="1.98 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-
-                <!-- WALL 1.2 -->
-
-                <!-- center wall -->
-                <!-- bottom -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="3.25 0 0" depth="0.5" height="3" width="2.04"></a-box>
-                <!-- middle -->
-                <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="3.25 2.5 0" depth="0.5" height="2" width="2.04"></a-box>
-
-                <!-- pillar 3 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="4.52 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="4.52 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-
-                <!-- WALL 1.3 -->
-
-                <!-- center wall -->
-                <!-- bottom -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="5.52 0 0" depth="0.5" height="3" width="1.49"></a-box>
-                <!-- middle -->
-                <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="5.52 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
-
-                <!-- pillar 4 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="6.51 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="6.51 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-            </a-entity>
-
-            <!-- gate object side 3 -->
-            <a-entity rotation="0 112.5 0" position="8.8 0 -0.125" shadow="cast: true">
-                <!-- top bar -->
-                <a-box material="src: #blueBrickDome; repeat: 4 3;" rotation="0 0 0" position="3.255 4 0.125" depth="0.5" height="1" width="7.01"></a-box>
-
-                <!-- pillar 1 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="0 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-
-                <!-- center wall -->
-                <!-- bottom -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0.99 0 0" depth="0.5" height="3" width="1.49"></a-box>
-                <!-- middle -->
-                <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="0.99 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
-
-                <!-- pillar 2 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="1.98 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="1.98 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-
-                <!-- WALL 1.2 -->
-
-                <!-- center wall -->
-                <!-- bottom -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="3.25 0 0" depth="0.5" height="3" width="2.04"></a-box>
-                <!-- middle -->
-                <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="3.25 2.5 0" depth="0.5" height="2" width="2.04"></a-box>
-
-                <!-- pillar 3 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="4.52 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="4.52 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-
-                <!-- WALL 1.3 -->
-
-                <!-- center wall -->
-                <!-- bottom -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="5.52 0 0" depth="0.5" height="3" width="1.49"></a-box>
-                <!-- middle -->
-                <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="5.52 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
-
-                <!-- pillar 4 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="6.51 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="6.51 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-            </a-entity>
-
-            <!-- gate object side 4 -->
-            <a-entity rotation="0 292.5 0" position="-8.8 0 0.125" shadow="cast: true">
-                <!-- top bar -->
-                <a-box material="src: #blueBrickDome; repeat: 4 3;" rotation="0 0 0" position="3.255 4 0.125" depth="0.5" height="1" width="7.01"></a-box>
-
-                <!-- pillar 1 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="0 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-
-                <!-- center wall -->
-                <!-- bottom -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0.99 0 0" depth="0.5" height="3" width="1.49"></a-box>
-                <!-- middle -->
-                <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="0.99 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
-
-                <!-- pillar 2 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="1.98 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="1.98 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-
-                <!-- WALL 1.2 -->
-
-                <!-- center wall -->
-                <!-- bottom -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="3.25 0 0" depth="0.5" height="3" width="2.04"></a-box>
-                <!-- middle -->
-                <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="3.25 2.5 0" depth="0.5" height="2" width="2.04"></a-box>
-
-                <!-- pillar 3 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="4.52 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="4.52 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-
-                <!-- WALL 1.3 -->
-
-                <!-- center wall -->
-                <!-- bottom -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="5.52 0 0" depth="0.5" height="3" width="1.49"></a-box>
-                <!-- middle -->
-                <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="5.52 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
-
-                <!-- pillar 4 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="6.51 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="6.51 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-            </a-entity>
-
-            <!-- gate object side 5 -->
-            <a-entity rotation="0 67.5 0" position="6.325 0 6.125" shadow="cast: true">
-                <!-- top bar -->
-                <a-box material="src: #blueBrickDome; repeat: 4 3;" rotation="0 0 0" position="3.255 4 0.125" depth="0.5" height="1" width="7.01"></a-box>
-
-                <!-- pillar 1 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="0 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-
-                <!-- center wall -->
-                <!-- bottom -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0.99 0 0" depth="0.5" height="3" width="1.49"></a-box>
-                <!-- middle -->
-                <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="0.99 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
-
-                <!-- pillar 2 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="1.98 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="1.98 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-
-                <!-- WALL 1.2 -->
-
-                <!-- center wall -->
-                <!-- bottom -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="3.25 0 0" depth="0.5" height="3" width="2.04"></a-box>
-                <!-- middle -->
-                <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="3.25 2.5 0" depth="0.5" height="2" width="2.04"></a-box>
-
-                <!-- pillar 3 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="4.52 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="4.52 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-
-                <!-- WALL 1.3 -->
-
-                <!-- center wall -->
-                <!-- bottom -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="5.52 0 0" depth="0.5" height="3" width="1.49"></a-box>
-                <!-- middle -->
-                <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="5.52 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
-
-                <!-- pillar 4 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="6.51 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="6.51 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-            </a-entity>
-
-            <!-- gate object side 6 -->
-            <a-entity rotation="0 337.5 0" position="-6.125 0 6.325" shadow="cast: true">
-                <!-- top bar -->
-                <a-box material="src: #blueBrickDome; repeat: 4 3;" rotation="0 0 0" position="3.255 4 0.125" depth="0.5" height="1" width="7.01"></a-box>
-
-                <!-- pillar 1 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="0 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-
-                <!-- center wall -->
-                <!-- bottom -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0.99 0 0" depth="0.5" height="3" width="1.49"></a-box>
-                <!-- middle -->
-                <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="0.99 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
-
-                <!-- pillar 2 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="1.98 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="1.98 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-
-                <!-- WALL 1.2 -->
-
-                <!-- center wall -->
-                <!-- bottom -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="3.25 0 0" depth="0.5" height="3" width="2.04"></a-box>
-                <!-- middle -->
-                <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="3.25 2.5 0" depth="0.5" height="2" width="2.04"></a-box>
-
-                <!-- pillar 3 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="4.52 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="4.52 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-
-                <!-- WALL 1.3 -->
-
-                <!-- center wall -->
-                <!-- bottom -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="5.52 0 0" depth="0.5" height="3" width="1.49"></a-box>
-                <!-- middle -->
-                <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="5.52 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
-
-                <!-- pillar 4 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="6.51 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="6.51 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-            </a-entity>
-
-            <!-- gate object side 7 -->
-            <a-entity rotation="0 157.5 0" position="6.125 0 -6.325" shadow="cast: true">
-                <!-- top bar -->
-                <a-box material="src: #blueBrickDome; repeat: 4 3;" rotation="0 0 0" position="3.255 4 0.125" depth="0.5" height="1" width="7.01"></a-box>
-
-                <!-- pillar 1 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="0 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-
-                <!-- center wall -->
-                <!-- bottom -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0.99 0 0" depth="0.5" height="3" width="1.49"></a-box>
-                <!-- middle -->
-                <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="0.99 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
-
-                <!-- pillar 2 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="1.98 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="1.98 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-
-                <!-- WALL 1.2 -->
-
-                <!-- center wall -->
-                <!-- bottom -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="3.25 0 0" depth="0.5" height="3" width="2.04"></a-box>
-                <!-- middle -->
-                <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="3.25 2.5 0" depth="0.5" height="2" width="2.04"></a-box>
-
-                <!-- pillar 3 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="4.52 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="4.52 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-
-                <!-- WALL 1.3 -->
-
-                <!-- center wall -->
-                <!-- bottom -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="5.52 0 0" depth="0.5" height="3" width="1.49"></a-box>
-                <!-- middle -->
-                <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="5.52 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
-
-                <!-- pillar 4 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="6.51 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="6.51 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-            </a-entity>
-
-            <!-- gate object side 8 -->
-            <a-entity rotation="0 247.5 0" position="-6.325 0 -6.125" shadow="cast: true">
-                <!-- top bar -->
-                <a-box material="src: #blueBrickDome; repeat: 4 3;" rotation="0 0 0" position="3.255 4 0.125" depth="0.5" height="1" width="7.01"></a-box>
-
-                <!-- pillar 1 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="0 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-
-                <!-- center wall -->
-                <!-- bottom -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0.99 0 0" depth="0.5" height="3" width="1.49"></a-box>
-                <!-- middle -->
-                <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="0.99 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
-
-                <!-- pillar 2 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="1.98 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="1.98 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-
-                <!-- WALL 1.2 -->
-
-                <!-- center wall -->
-                <!-- bottom -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="3.25 0 0" depth="0.5" height="3" width="2.04"></a-box>
-                <!-- middle -->
-                <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="3.25 2.5 0" depth="0.5" height="2" width="2.04"></a-box>
-
-                <!-- pillar 3 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="4.52 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="4.52 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-
-                <!-- WALL 1.3 -->
-
-                <!-- center wall -->
-                <!-- bottom -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="5.52 0 0" depth="0.5" height="3" width="1.49"></a-box>
-                <!-- middle -->
-                <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="5.52 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
-
-                <!-- pillar 4 -->
-                <!-- bottom pillar -->
-                <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="6.51 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
-                <!-- top pillar -->
-                <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="6.51 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
-            </a-entity>
-
+        <a-entity light="type: ambient; intensity: 0.7; color: #fff;"></a-entity>
+        <a-entity position="7 10 15" light="type: directional;
+                       castShadow: true;
+                       intensity: 0.8;
+                       shadowCameraVisible: false;"
+                  animation="
+                  property: position;
+                  to: 0 10 -15;
+                  dur: 50000;
+                  delay: 1000;
+                  easing: linear;
+                  loop: true;
+                  dir:alternate;"></a-entity>
+
+        <!-- Overall Maps -->
+        <a-entity position="0 0 0">
+          <!-- Dome of the rock Building -->
+          <a-entity position="0 0 0" shadow="cast: true; receive: true">
+              <!-- Base bottom -->
+              <a-entity geometry="primitive: cylinder; height: 3; radius: 9; openEnded: true; segmentsHeight: 1; segmentsRadial: 8;" material="src: #whiteBrick; repeat: 13 3; side: double; wireframe: false;" position="0 0 0"></a-entity>
+
+              <!-- 8 pillar bottom -->
+              <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 45 0" position="0 0 8.8" depth="0.68" height="3" width="0.68" color="#fff"></a-box>
+              <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 45 0" position="0 0 -8.8" depth="0.68" height="3" width="0.68" color="#fff"></a-box>
+              <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 45 0" position="8.8 0 0" depth="0.68" height="3" width="0.68" color="#fff"></a-box>
+              <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 45 0" position="-8.8 0 0" depth="0.68" height="3" width="0.68" color="#fff"></a-box>
+              <a-box material="src: #whiteBrick; repeat: 1 4;" position="6.225 0 6.225" depth="0.68" height="3" width="0.68" color="#fff"></a-box>
+              <a-box material="src: #whiteBrick; repeat: 1 4;" position="-6.225 0 6.225" depth="0.68" height="3" width="0.68" color="#fff"></a-box>
+              <a-box material="src: #whiteBrick; repeat: 1 4;" position="6.225 0 -6.225" depth="0.68" height="3" width="0.68" color="#fff"></a-box>
+              <a-box material="src: #whiteBrick; repeat: 1 4;" position="-6.225 0 -6.225" depth="0.68" height="3" width="0.68" color="#fff"></a-box>
+
+              <!-- Base top -->
+              <a-entity geometry="primitive: cylinder; height: 3; radiusTubular: 3; radius: 9; openEnded: true; segmentsHeight: 1; segmentsRadial: 8;" material="src: #blueBrickDome; repeat: 48 5; side: double; wireframe: false; transparent: true;" position="0 3 0"></a-entity>
+
+              <!-- 8 pillar top -->
+              <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 45 0" position="0 3 8.8" depth="0.68" height="3" width="0.68"></a-box>
+              <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 45 0" position="0 3 -8.8" depth="0.68" height="3" width="0.68"></a-box>
+              <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 45 0" position="8.8 3 0" depth="0.68" height="3" width="0.68"></a-box>
+              <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 45 0" position="-8.8 3 0" depth="0.68" height="3" width="0.68"></a-box>
+              <a-box material="src: #blueBrickDome; repeat: 1 4;" position="6.225 3 6.225" depth="0.68" height="3" width="0.68"></a-box>
+              <a-box material="src: #blueBrickDome; repeat: 1 4;" position="-6.225 3 6.225" depth="0.68" height="3" width="0.68"></a-box>
+              <a-box material="src: #blueBrickDome; repeat: 1 4;" position="6.225 3 -6.225" depth="0.68" height="3" width="0.68"></a-box>
+              <a-box material="src: #blueBrickDome; repeat: 1 4;" position="-6.225 3 -6.225" depth="0.68" height="3" width="0.68"></a-box>
+
+              <!-- Top of the Dome -->
+              <!-- base top -->
+              <a-entity geometry="primitive: cylinder; radius: 8.99; height: 0.1; segmentsHeight: 1; segmentsRadial: 8;" material="src: #blueBrickDome; repeat: 91 1; side: double; wireframe: false; transparent: true;" position="0 4 0" shadow="cast: true;"></a-entity>
+
+              <!-- 4 pillar top -->
+              <a-box material="src: #topBlock; repeat: 1 1;" rotation="0 22.5 0" position="-4.99581 5.5 2.0698125" depth="1.5" height="3" width="1.5"></a-box>
+              <a-box material="src: #topBlock; repeat: 1 1;" rotation="0 22.5 0" position="4.99581 5.5 -2.0698125" depth="1.5" height="3" width="1.5"></a-box>
+              <a-box material="src: #topBlock; repeat: 1 1;" rotation="0 22.5 0" position="2.0698125 5.5 4.99581" depth="1.5" height="3" width="1.5"></a-box>
+              <a-box material="src: #topBlock; repeat: 1 1;" rotation="0 22.5 0" position="-2.0698125 5.5 -4.99581" depth="1.5" height="3" width="1.5"></a-box>
+
+              <!-- top bar -->
+              <a-entity geometry="primitive: cylinder; radius: 6; height: 3;" material="src: #topBlock; repeat: 24 1; side: double; wireframe: false; transparent: true;" position="0 5.5 0" shadow="cast: true;"></a-entity>
+
+              <!-- base of gold dome plate -->
+              <a-entity geometry="primitive: cylinder; radius: 6.25; height: 0.1" material="src: #goldDome; repeat: 3 12; side: double; wireframe: false; transparent: true;" position="0 7.05 0" shadow="cast: true;"></a-entity>
+              <!-- gold dome -->
+              <a-entity geometry="primitive: sphere; radius: 6" material="src: #goldDome; repeat: 5 5" color="#ebbf2a" position="0 6 0"></a-entity>
+
+              <!-- wall -->
+              <!-- gate object side 1 front door -->
+              <a-entity rotation="0 22.5 0" position="0.125 0 8.8" shadow="cast: true">
+                  <!-- top bar -->
+                  <a-box material="src: #blueBrickDome; repeat: 4 3;" rotation="0 0 0" position="3.255 4 0.125" depth="0.5" height="1" width="7.01"></a-box>
+
+                  <!-- pillar 1 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="0 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+
+                  <!-- center wall -->
+                  <!-- bottom -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0.99 0 0" depth="0.5" height="3" width="1.49"></a-box>
+                  <!-- middle -->
+                  <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="0.99 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
+
+                  <!-- FRONT DOOR -->
+                  <!-- pillar back -->
+                  <a-box material="src: #whiteBrick; repeat: 1 1;" rotation="0 0 0" position="1.98 -1.25 1.125" depth="0.5" height="0.5" width="0.5"></a-box>
+                  <a-cylinder material="src: #whiteBrick; repeat: 1 3;" position="1.98 0 1.125" radius="0.1" height="3"></a-cylinder>
+                  <a-box material="src: #whiteBrick; repeat: 1 1;" rotation="0 0 0" position="4.52 -1.25 1.125" depth="0.5" height="0.5" width="0.5"></a-box>
+                  <a-cylinder material="src: #whiteBrick; repeat: 1 3;" position="4.52 0 1.125" radius="0.1" height="3"></a-cylinder>
+
+                  <!-- pillar front -->
+                  <a-box material="src: #whiteBrick; repeat: 1 1;" rotation="0 0 0" position="1.98 -1.25 3.125" depth="0.5" height="0.5" width="0.5"></a-box>
+                  <a-cylinder material="src: #whiteBrick; repeat: 1 3;" position="1.98 0 3.125" radius="0.1" height="3"></a-cylinder>
+                  <a-box material="src: #whiteBrick; repeat: 1 1;" rotation="0 0 0" position="4.52 -1.25 3.125" depth="0.5" height="0.5" width="0.5"></a-box>
+                  <a-cylinder material="src: #whiteBrick; repeat: 1 3;" position="4.52 0 3.125" radius="0.1" height="3"></a-cylinder>
+
+                  <!-- Ground -->
+                  <a-box material="src: #whiteBrick; repeat: 1 1;" rotation="0 0 0" position="3.25 -1.5 2.7" depth="5.125" height="0.1" width="3.25"></a-box>
+
+                  <!-- Roof -->
+                  <!-- left -->
+                  <a-box material="src: #whiteBrick; repeat: 1 1;" rotation="0 0 0" position="1.98 1.5 1.5625" depth="3.425" height="0.5" width="0.55"></a-box>
+                  <a-box material="src: #whiteBrick; repeat: 1 1;" rotation="0 0 0" position="1.98 2 1.5625" depth="3.425" height="0.5" width="0.55"></a-box>
+                  <a-box material="src: #whiteBrick; repeat: 4 1;" rotation="0 0 0" position="1.98 1.75 1.6625" depth="3.425" height="0.1" width="0.75"></a-box>
+                  <!-- right -->
+                  <a-box material="src: #whiteBrick; repeat: 1 1;" rotation="0 0 0" position="4.52 1.5 1.5625" depth="3.425" height="0.5" width="0.55"></a-box>
+                  <a-box material="src: #whiteBrick; repeat: 1 1;" rotation="0 0 0" position="4.52 2 1.5625" depth="3.425" height="0.5" width="0.55"></a-box>
+                  <a-box material="src: #whiteBrick; repeat: 4 1;" rotation="0 0 0" position="4.52 1.75 1.6625" depth="3.425" height="0.1" width="0.75"></a-box>
+
+                  <a-box material="src: #whiteBrick; repeat: 1 1;" rotation="0 0 0" position="3.25 1.6 1.5625" depth="3.425" height="0.15" width="2.7"></a-box>
+                  <a-entity geometry="primitive: cylinder; radius: 1.35; height: 3.125; thetaStart: 0; thetaLength: 180" material="src: #whiteBrick; repeat: 1 1; side: double; wireframe: false; transparent: true;" rotation="0 90 90" position="3.25 1.6 1.5625"></a-entity>
+
+                  <!-- door -->
+                  <a-box material="src: #door; repeat: 1 1;" rotation="0 0 0" position="3.28 0 0.005" depth="0.5" height="2.8" width="1.5"></a-box>
+
+                  <!-- END FRONT DOOR -->
+
+                  <!-- pillar 2 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="1.98 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="1.98 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+
+                  <!-- WALL 1.2 -->
+
+                  <!-- center wall -->
+                  <!-- bottom -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="3.25 0 0" depth="0.5" height="3" width="2.04"></a-box>
+                  <!-- middle -->
+                  <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="3.25 2.5 0" depth="0.5" height="2" width="2.04"></a-box>
+
+                  <!-- pillar 3 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="4.52 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="4.52 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+
+                  <!-- WALL 1.3 -->
+
+                  <!-- center wall -->
+                  <!-- bottom -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="5.52 0 0" depth="0.5" height="3" width="1.49"></a-box>
+                  <!-- middle -->
+                  <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="5.52 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
+
+                  <!-- pillar 4 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="6.51 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="6.51 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+              </a-entity>
+
+              <!-- gate object side 2 -->
+              <a-entity rotation="0 202.5 0" position="-0.125 0 -8.8" shadow="cast: true">
+                  <!-- top bar -->
+                  <a-box material="src: #blueBrickDome; repeat: 4 3;" rotation="0 0 0" position="3.255 4 0.125" depth="0.5" height="1" width="7.01"></a-box>
+
+                  <!-- pillar 1 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="0 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+
+                  <!-- center wall -->
+                  <!-- bottom -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0.99 0 0" depth="0.5" height="3" width="1.49"></a-box>
+                  <!-- middle -->
+                  <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="0.99 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
+
+                  <!-- pillar 2 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="1.98 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="1.98 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+
+                  <!-- WALL 1.2 -->
+
+                  <!-- center wall -->
+                  <!-- bottom -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="3.25 0 0" depth="0.5" height="3" width="2.04"></a-box>
+                  <!-- middle -->
+                  <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="3.25 2.5 0" depth="0.5" height="2" width="2.04"></a-box>
+
+                  <!-- pillar 3 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="4.52 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="4.52 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+
+                  <!-- WALL 1.3 -->
+
+                  <!-- center wall -->
+                  <!-- bottom -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="5.52 0 0" depth="0.5" height="3" width="1.49"></a-box>
+                  <!-- middle -->
+                  <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="5.52 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
+
+                  <!-- pillar 4 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="6.51 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="6.51 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+              </a-entity>
+
+              <!-- gate object side 3 -->
+              <a-entity rotation="0 112.5 0" position="8.8 0 -0.125" shadow="cast: true">
+                  <!-- top bar -->
+                  <a-box material="src: #blueBrickDome; repeat: 4 3;" rotation="0 0 0" position="3.255 4 0.125" depth="0.5" height="1" width="7.01"></a-box>
+
+                  <!-- pillar 1 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="0 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+
+                  <!-- center wall -->
+                  <!-- bottom -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0.99 0 0" depth="0.5" height="3" width="1.49"></a-box>
+                  <!-- middle -->
+                  <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="0.99 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
+
+                  <!-- pillar 2 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="1.98 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="1.98 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+
+                  <!-- WALL 1.2 -->
+
+                  <!-- center wall -->
+                  <!-- bottom -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="3.25 0 0" depth="0.5" height="3" width="2.04"></a-box>
+                  <!-- middle -->
+                  <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="3.25 2.5 0" depth="0.5" height="2" width="2.04"></a-box>
+
+                  <!-- pillar 3 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="4.52 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="4.52 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+
+                  <!-- WALL 1.3 -->
+
+                  <!-- center wall -->
+                  <!-- bottom -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="5.52 0 0" depth="0.5" height="3" width="1.49"></a-box>
+                  <!-- middle -->
+                  <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="5.52 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
+
+                  <!-- pillar 4 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="6.51 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="6.51 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+              </a-entity>
+
+              <!-- gate object side 4 -->
+              <a-entity rotation="0 292.5 0" position="-8.8 0 0.125" shadow="cast: true">
+                  <!-- top bar -->
+                  <a-box material="src: #blueBrickDome; repeat: 4 3;" rotation="0 0 0" position="3.255 4 0.125" depth="0.5" height="1" width="7.01"></a-box>
+
+                  <!-- pillar 1 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="0 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+
+                  <!-- center wall -->
+                  <!-- bottom -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0.99 0 0" depth="0.5" height="3" width="1.49"></a-box>
+                  <!-- middle -->
+                  <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="0.99 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
+
+                  <!-- pillar 2 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="1.98 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="1.98 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+
+                  <!-- WALL 1.2 -->
+
+                  <!-- center wall -->
+                  <!-- bottom -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="3.25 0 0" depth="0.5" height="3" width="2.04"></a-box>
+                  <!-- middle -->
+                  <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="3.25 2.5 0" depth="0.5" height="2" width="2.04"></a-box>
+
+                  <!-- pillar 3 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="4.52 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="4.52 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+
+                  <!-- WALL 1.3 -->
+
+                  <!-- center wall -->
+                  <!-- bottom -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="5.52 0 0" depth="0.5" height="3" width="1.49"></a-box>
+                  <!-- middle -->
+                  <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="5.52 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
+
+                  <!-- pillar 4 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="6.51 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="6.51 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+              </a-entity>
+
+              <!-- gate object side 5 -->
+              <a-entity rotation="0 67.5 0" position="6.325 0 6.125" shadow="cast: true">
+                  <!-- top bar -->
+                  <a-box material="src: #blueBrickDome; repeat: 4 3;" rotation="0 0 0" position="3.255 4 0.125" depth="0.5" height="1" width="7.01"></a-box>
+
+                  <!-- pillar 1 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="0 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+
+                  <!-- center wall -->
+                  <!-- bottom -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0.99 0 0" depth="0.5" height="3" width="1.49"></a-box>
+                  <!-- middle -->
+                  <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="0.99 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
+
+                  <!-- pillar 2 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="1.98 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="1.98 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+
+                  <!-- WALL 1.2 -->
+
+                  <!-- center wall -->
+                  <!-- bottom -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="3.25 0 0" depth="0.5" height="3" width="2.04"></a-box>
+                  <!-- middle -->
+                  <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="3.25 2.5 0" depth="0.5" height="2" width="2.04"></a-box>
+
+                  <!-- pillar 3 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="4.52 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="4.52 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+
+                  <!-- WALL 1.3 -->
+
+                  <!-- center wall -->
+                  <!-- bottom -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="5.52 0 0" depth="0.5" height="3" width="1.49"></a-box>
+                  <!-- middle -->
+                  <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="5.52 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
+
+                  <!-- pillar 4 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="6.51 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="6.51 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+              </a-entity>
+
+              <!-- gate object side 6 -->
+              <a-entity rotation="0 337.5 0" position="-6.125 0 6.325" shadow="cast: true">
+                  <!-- top bar -->
+                  <a-box material="src: #blueBrickDome; repeat: 4 3;" rotation="0 0 0" position="3.255 4 0.125" depth="0.5" height="1" width="7.01"></a-box>
+
+                  <!-- pillar 1 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="0 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+
+                  <!-- center wall -->
+                  <!-- bottom -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0.99 0 0" depth="0.5" height="3" width="1.49"></a-box>
+                  <!-- middle -->
+                  <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="0.99 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
+
+                  <!-- pillar 2 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="1.98 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="1.98 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+
+                  <!-- WALL 1.2 -->
+
+                  <!-- center wall -->
+                  <!-- bottom -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="3.25 0 0" depth="0.5" height="3" width="2.04"></a-box>
+                  <!-- middle -->
+                  <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="3.25 2.5 0" depth="0.5" height="2" width="2.04"></a-box>
+
+                  <!-- pillar 3 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="4.52 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="4.52 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+
+                  <!-- WALL 1.3 -->
+
+                  <!-- center wall -->
+                  <!-- bottom -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="5.52 0 0" depth="0.5" height="3" width="1.49"></a-box>
+                  <!-- middle -->
+                  <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="5.52 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
+
+                  <!-- pillar 4 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="6.51 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="6.51 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+              </a-entity>
+
+              <!-- gate object side 7 -->
+              <a-entity rotation="0 157.5 0" position="6.125 0 -6.325" shadow="cast: true">
+                  <!-- top bar -->
+                  <a-box material="src: #blueBrickDome; repeat: 4 3;" rotation="0 0 0" position="3.255 4 0.125" depth="0.5" height="1" width="7.01"></a-box>
+
+                  <!-- pillar 1 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="0 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+
+                  <!-- center wall -->
+                  <!-- bottom -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0.99 0 0" depth="0.5" height="3" width="1.49"></a-box>
+                  <!-- middle -->
+                  <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="0.99 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
+
+                  <!-- pillar 2 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="1.98 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="1.98 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+
+                  <!-- WALL 1.2 -->
+
+                  <!-- center wall -->
+                  <!-- bottom -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="3.25 0 0" depth="0.5" height="3" width="2.04"></a-box>
+                  <!-- middle -->
+                  <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="3.25 2.5 0" depth="0.5" height="2" width="2.04"></a-box>
+
+                  <!-- pillar 3 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="4.52 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="4.52 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+
+                  <!-- WALL 1.3 -->
+
+                  <!-- center wall -->
+                  <!-- bottom -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="5.52 0 0" depth="0.5" height="3" width="1.49"></a-box>
+                  <!-- middle -->
+                  <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="5.52 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
+
+                  <!-- pillar 4 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="6.51 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="6.51 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+              </a-entity>
+
+              <!-- gate object side 8 -->
+              <a-entity rotation="0 247.5 0" position="-6.325 0 -6.125" shadow="cast: true">
+                  <!-- top bar -->
+                  <a-box material="src: #blueBrickDome; repeat: 4 3;" rotation="0 0 0" position="3.255 4 0.125" depth="0.5" height="1" width="7.01"></a-box>
+
+                  <!-- pillar 1 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="0 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+
+                  <!-- center wall -->
+                  <!-- bottom -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0.99 0 0" depth="0.5" height="3" width="1.49"></a-box>
+                  <!-- middle -->
+                  <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="0.99 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
+
+                  <!-- pillar 2 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="1.98 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="1.98 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+
+                  <!-- WALL 1.2 -->
+
+                  <!-- center wall -->
+                  <!-- bottom -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="3.25 0 0" depth="0.5" height="3" width="2.04"></a-box>
+                  <!-- middle -->
+                  <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="3.25 2.5 0" depth="0.5" height="2" width="2.04"></a-box>
+
+                  <!-- pillar 3 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="4.52 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="4.52 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+
+                  <!-- WALL 1.3 -->
+
+                  <!-- center wall -->
+                  <!-- bottom -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="5.52 0 0" depth="0.5" height="3" width="1.49"></a-box>
+                  <!-- middle -->
+                  <a-box material="src: #window; repeat: 1 1;" rotation="0 0 0" position="5.52 2.5 0" depth="0.5" height="2" width="1.49"></a-box>
+
+                  <!-- pillar 4 -->
+                  <!-- bottom pillar -->
+                  <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="6.51 0 0.125" depth="0.5" height="3" width="0.5"></a-box>
+                  <!-- top pillar -->
+                  <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="6.51 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
+              </a-entity>
+          </a-entity>
+          <!-- END Dome of the rock Building -->
+
+          <!-- Ground -->
+          <a-plane roughness="1" material="src:#ground; repeat: 512 512; shader: standard" rotation="-90 0 0" position="0 -1.5 0" width="2048" height="2048" shadow="receive: true"></a-plane>
+
+          <!-- เอา prop วางไว้ที่นี่ -->
 
         </a-entity>
-
-        <!-- Ground -->
-        <a-plane roughness="1" material="src:#ground; repeat: 2048 2048; shader: standard" rotation="-90 0 0" position="0 -1.5 0" width="2048" height="2048" color="#287800" shadow="receive: true"></a-plane>
-
-        <!-- เอา prop วางไว้ที่นี่ -->
     </a-scene>
 
 </body>
