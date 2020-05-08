@@ -6,6 +6,7 @@
 </head>
 <body>
     <assets>
+        <img id="blueBrick" crossorigin="anonymous" src="https://i.imgur.com/v8s4KPK.jpg" />
         <img id="whiteBrick" crossorigin="anonymous" src="https://i.imgur.com/HpIHL2B.jpg" />
         <img id="ground" crossorigin="anonymous" src="https://i.imgur.com/bVmouHi.jpg" />
     </asset>
@@ -13,18 +14,40 @@
     <!-- Overall Maps -->
     <a-scene shadow="type: pcfsoft">
         <a-sky color="#fff"></a-sky>
-        <a-camera position="0 1 11"></a-camera>
-
-        <!-- pillar -->
+        <a-camera position="-6.225 0 6.225"></a-camera>
 
         <!-- Dome of the rock -->
-        <a-entity shadow="cast: true">
-            <!-- Base -->
-            <a-entity geometry="primitive: cylinder; height: 5; radius: 10; openEnded: true; segmentsHeight: 1; segmentsRadial: 8;" material="src: #whiteBrick; repeat: 13 3; side: double; wireframe: false; transparent: true;" position="0 0.9144 0"></a-entity>
+        <a-entity position="0 0 0" shadow="cast: true">
+            <!-- Base down -->
+            <a-entity geometry="primitive: cylinder; height: 3; radius: 9; openEnded: true; segmentsHeight: 1; segmentsRadial: 8;" material="src: #whiteBrick; repeat: 13 3; side: double; wireframe: false; transparent: true;" position="0 0 0"></a-entity>
+
+            <!-- pillar down -->
+            <a-box material="src: #whiteBrick; repeat: 1 2;" rotation="0 45 0" position="0 0 8.8" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
+            <a-box material="src: #whiteBrick; repeat: 1 2;" rotation="0 45 0" position="0 0 -8.8" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
+            <a-box material="src: #whiteBrick; repeat: 1 2;" rotation="0 45 0" position="8.8 0 0" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
+            <a-box material="src: #whiteBrick; repeat: 1 2;" rotation="0 45 0" position="-8.8 0 0" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
+            <a-box material="src: #whiteBrick; repeat: 1 2;" position="6.225 0 6.225" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
+            <a-box material="src: #whiteBrick; repeat: 1 2;" position="-6.225 0 6.225" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
+            <a-box material="src: #whiteBrick; repeat: 1 2;" position="6.225 0 -6.225" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
+            <a-box material="src: #whiteBrick; repeat: 1 2;" position="-6.225 0 -6.225" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
+
+
+            <!-- Base top -->
+            <a-entity geometry="primitive: cylinder; height: 3; radius: 9; openEnded: true; segmentsHeight: 1; segmentsRadial: 8;" material="src: #blueBrick; repeat: 13 3; side: double; wireframe: false; transparent: true;" position="0 3 0"></a-entity>
+
+            <!-- pillar top -->
+            <a-box material="src: #blueBrick; repeat: 1 2;" rotation="0 45 0" position="0 3 8.8" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
+            <a-box material="src: #blueBrick; repeat: 1 2;" rotation="0 45 0" position="0 3 -8.8" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
+            <a-box material="src: #blueBrick; repeat: 1 2;" rotation="0 45 0" position="8.8 3 0" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
+            <a-box material="src: #blueBrick; repeat: 1 2;" rotation="0 45 0" position="-8.8 3 0" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
+            <a-box material="src: #blueBrick; repeat: 1 2;" position="6.225 3 6.225" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
+            <a-box material="src: #blueBrick; repeat: 1 2;" position="-6.225 3 6.225" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
+            <a-box material="src: #blueBrick; repeat: 1 2;" position="6.225 3 -6.225" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
+            <a-box material="src: #blueBrick; repeat: 1 2;" position="-6.225 3 -6.225" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
         </a-entity>
 
         <!-- Ground -->
-        <a-plane roughness="1" material="src:#ground; repeat: 2048 2048; shader: standard" rotation="-90 0 0" position="0 0 0" width="2048" height="2048" color="#287800" shadow="receive: true"></a-plane>
+        <a-plane roughness="1" material="src:#ground; repeat: 2048 2048; shader: standard" rotation="-90 0 0" position="0 -1.5 0" width="2048" height="2048" color="#287800" shadow="receive: true"></a-plane>
     </a-scene>
 
 </body>
