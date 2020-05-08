@@ -6,7 +6,9 @@
 </head>
 <body>
     <assets>
-        <img id="blueBrick" crossorigin="anonymous" src="https://i.imgur.com/v8s4KPK.jpg" />
+        <img id="goldDome" crossorigin="anonymous" src="https://i.imgur.com/8Cf2YfH.jpg" />
+        <img id="blueBrickDome" crossorigin="anonymous" src="https://i.imgur.com/T9q3HI2.jpg" />
+        <img id="window" crossorigin="anonymous" src="https://i.imgur.com/PjtUUdT.jpg" />
         <img id="whiteBrick" crossorigin="anonymous" src="https://i.imgur.com/HpIHL2B.jpg" />
         <img id="ground" crossorigin="anonymous" src="https://i.imgur.com/bVmouHi.jpg" />
     </asset>
@@ -14,40 +16,77 @@
     <!-- Overall Maps -->
     <a-scene shadow="type: pcfsoft">
         <a-sky color="#fff"></a-sky>
-        <a-camera position="-6.225 0 6.225"></a-camera>
+        <a-camera position="0 0 15"></a-camera>
+
+        <!-- gate object -->
+        <a-entity position="0 0 13" shadow="cast: true">
+            <!-- left pillar-->
+            <!-- bottom pillar -->
+            <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0 0 0" depth="0.5" height="3" width="0.5"></a-box>
+            <!-- top pillar -->
+            <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0 3 0" depth="0.5" height="3" width="0.5" color="#4153a9"></a-box>
+
+            <!-- right pillar-->
+            <!-- bottom pillar -->
+            <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0 0 0" depth="0.5" height="3" width="0.5"></a-box>
+            <!-- top pillar -->
+            <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 0 0" position="0 3 0" depth="0.5" height="3" width="0.5" color="#4153a9"></a-box>
+
+
+        </a-entity>
 
         <!-- Dome of the rock -->
         <a-entity position="0 0 0" shadow="cast: true">
-            <!-- Base down -->
+            <!-- Base bottom -->
             <a-entity geometry="primitive: cylinder; height: 3; radius: 9; openEnded: true; segmentsHeight: 1; segmentsRadial: 8;" material="src: #whiteBrick; repeat: 13 3; side: double; wireframe: false; transparent: true;" position="0 0 0"></a-entity>
 
-            <!-- pillar down -->
-            <a-box material="src: #whiteBrick; repeat: 1 2;" rotation="0 45 0" position="0 0 8.8" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
-            <a-box material="src: #whiteBrick; repeat: 1 2;" rotation="0 45 0" position="0 0 -8.8" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
-            <a-box material="src: #whiteBrick; repeat: 1 2;" rotation="0 45 0" position="8.8 0 0" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
-            <a-box material="src: #whiteBrick; repeat: 1 2;" rotation="0 45 0" position="-8.8 0 0" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
-            <a-box material="src: #whiteBrick; repeat: 1 2;" position="6.225 0 6.225" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
-            <a-box material="src: #whiteBrick; repeat: 1 2;" position="-6.225 0 6.225" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
-            <a-box material="src: #whiteBrick; repeat: 1 2;" position="6.225 0 -6.225" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
-            <a-box material="src: #whiteBrick; repeat: 1 2;" position="-6.225 0 -6.225" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
-
+            <!-- 8 pillar bottom -->
+            <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 45 0" position="0 0 8.8" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
+            <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 45 0" position="0 0 -8.8" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
+            <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 45 0" position="8.8 0 0" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
+            <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 45 0" position="-8.8 0 0" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
+            <a-box material="src: #whiteBrick; repeat: 1 4;" position="6.225 0 6.225" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
+            <a-box material="src: #whiteBrick; repeat: 1 4;" position="-6.225 0 6.225" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
+            <a-box material="src: #whiteBrick; repeat: 1 4;" position="6.225 0 -6.225" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
+            <a-box material="src: #whiteBrick; repeat: 1 4;" position="-6.225 0 -6.225" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
 
             <!-- Base top -->
-            <a-entity geometry="primitive: cylinder; height: 3; radius: 9; openEnded: true; segmentsHeight: 1; segmentsRadial: 8;" material="src: #blueBrick; repeat: 13 3; side: double; wireframe: false; transparent: true;" position="0 3 0"></a-entity>
+            <a-entity geometry="primitive: cylinder; height: 3; radiusTubular: 3; radius: 9; openEnded: true; segmentsHeight: 1; segmentsRadial: 8;" material="src: #blueBrickDome; repeat: 48 5; side: double; wireframe: false; transparent: true;" position="0 3 0"></a-entity>
 
-            <!-- pillar top -->
-            <a-box material="src: #blueBrick; repeat: 1 2;" rotation="0 45 0" position="0 3 8.8" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
-            <a-box material="src: #blueBrick; repeat: 1 2;" rotation="0 45 0" position="0 3 -8.8" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
-            <a-box material="src: #blueBrick; repeat: 1 2;" rotation="0 45 0" position="8.8 3 0" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
-            <a-box material="src: #blueBrick; repeat: 1 2;" rotation="0 45 0" position="-8.8 3 0" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
-            <a-box material="src: #blueBrick; repeat: 1 2;" position="6.225 3 6.225" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
-            <a-box material="src: #blueBrick; repeat: 1 2;" position="-6.225 3 6.225" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
-            <a-box material="src: #blueBrick; repeat: 1 2;" position="6.225 3 -6.225" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
-            <a-box material="src: #blueBrick; repeat: 1 2;" position="-6.225 3 -6.225" depth="0.5" height="3" width="0.5" color="#fff"></a-box>
+            <!-- 8 pillar top -->
+            <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 45 0" position="0 3 8.8" depth="0.5" height="3" width="0.5" color="#4153a9"></a-box>
+            <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 45 0" position="0 3 -8.8" depth="0.5" height="3" width="0.5" color="#4153a9"></a-box>
+            <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 45 0" position="8.8 3 0" depth="0.5" height="3" width="0.5" color="#4153a9"></a-box>
+            <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 45 0" position="-8.8 3 0" depth="0.5" height="3" width="0.5" color="#4153a9"></a-box>
+            <a-box material="src: #whiteBrick; repeat: 1 4;" position="6.225 3 6.225" depth="0.5" height="3" width="0.5" color="#4153a9"></a-box>
+            <a-box material="src: #whiteBrick; repeat: 1 4;" position="-6.225 3 6.225" depth="0.5" height="3" width="0.5" color="#4153a9"></a-box>
+            <a-box material="src: #whiteBrick; repeat: 1 4;" position="6.225 3 -6.225" depth="0.5" height="3" width="0.5" color="#4153a9"></a-box>
+            <a-box material="src: #whiteBrick; repeat: 1 4;" position="-6.225 3 -6.225" depth="0.5" height="3" width="0.5" color="#4153a9"></a-box>
+
+            <!-- Top of the Dome -->
+            <!-- base top -->
+            <a-entity geometry="primitive: cylinder; radius: 8.99; height: 0.1; segmentsHeight: 1; segmentsRadial: 8;" material="src: #blueBrickDome; repeat: 91 1; side: double; wireframe: false; transparent: true;" position="0 4 0" shadow="cast: false; receive: true;"></a-entity>
+
+            <!-- 4 pillar top -->
+            <a-box material="src: #whiteBrick; repeat: 1 1;" color="#4153a9" rotation="0 22.5 0" position="-5.25875 5.5 2.17875" depth="1" height="3" width="1" color="#fff"></a-box>
+            <a-box material="src: #whiteBrick; repeat: 1 1;" color="#4153a9" rotation="0 22.5 0" position="5.25875 5.5 -2.17875" depth="1" height="3" width="1" color="#fff"></a-box>
+            <a-box material="src: #whiteBrick; repeat: 1 1;" color="#4153a9" rotation="0 22.5 0" position="2.17875 5.5 5.25875" depth="1" height="3" width="1" color="#fff"></a-box>
+            <a-box material="src: #whiteBrick; repeat: 1 1;" color="#4153a9" rotation="0 22.5 0" position="-2.17875 5.5 -5.25875" depth="1" height="3" width="1" color="#fff"></a-box>
+
+            <!-- top bar -->
+            <a-entity geometry="primitive: cylinder; radius: 6; height: 3;" material="src: #blueBrickDome; repeat: 20 12; side: double; wireframe: false; transparent: true;" position="0 5.5 0" shadow="cast: false; receive: true;"></a-entity>
+
+            <!-- base of gold dome plate -->
+            <a-entity geometry="primitive: cylinder; radius: 6.25; height: 0.1" material="src: #goldDome; repeat: 5 1; side: double; wireframe: false; transparent: true;" position="0 7.05 0" shadow="cast: false; receive: true;"></a-entity>
+            <!-- gold dome -->
+            <a-entity geometry="primitive: sphere; radius: 6" material="src: #goldDome; repeat: 5 5" color="#ebbf2a" position="0 6 0"></a-entity>
+
         </a-entity>
 
         <!-- Ground -->
         <a-plane roughness="1" material="src:#ground; repeat: 2048 2048; shader: standard" rotation="-90 0 0" position="0 -1.5 0" width="2048" height="2048" color="#287800" shadow="receive: true"></a-plane>
+
+        <!-- เอา prop วางไว้ที่นี่ -->
     </a-scene>
 
 </body>
