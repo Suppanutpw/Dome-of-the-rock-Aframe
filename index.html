@@ -23,8 +23,8 @@
     <a-scene shadow="type: pcfsoft">
         <a-sky rotation="0 135 0" material="src: #sky360"></a-sky>
         <!-- set camera pos here 292.5-->
-        <a-entity rotation="0 292.5 0" position="-15.025 0 6.225">
-            <a-camera position="0 0 0" zoom="0.8"></a-camera>
+        <a-entity movement-controls="constrainToNavMesh: true; speed: 0.2;" rotation="0 292.5 0" position="-15.025 0 6.225" animation="property: rotation; from: -60 292.5 0; to: 0 292.5 0; dur: 7000; easing: easeInOutQuad;">
+            <a-camera position="0 0 0" zoom="0.8" look-controls="pointerLockEnabled: true;"></a-camera>
         </a-entity>
 
         <!-- code for rotate camera -->
