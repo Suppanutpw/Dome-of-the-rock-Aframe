@@ -22,26 +22,23 @@
             <a-camera position="0 0 0"></a-camera>
         </a-entity>
 
-        <a-entity light="type: ambient; intensity: 0.7; color: #fff;"></a-entity>
-        <a-entity position="7 10 15" light="type: directional;
-                       castShadow: true;
-                       intensity: 0.8;
-                       shadowCameraVisible: false;"
-                  animation="
-                  property: position;
-                  to: 0 10 -15;
-                  dur: 50000;
-                  delay: 1000;
-                  easing: linear;
-                  loop: true;
-                  dir:alternate;"></a-entity>
+        <a-entity light="type: ambient; intensity: 0.8; color: #fff;"></a-entity>
+        <a-entity light="type: point; intensity: 6; distance: 50; decay: 2; castShadow:true; shadowCameraVisible: false; color: #deeff5;"
+          position="15 25 15" animation="
+              property: position;
+              to: -15 25 -15;
+              dur: 30000;
+              delay: 1000;
+              easing: linear;
+              loop: true;
+              dir:alternate;"></a-entity>
 
         <!-- Overall Maps -->
         <a-entity position="0 0 0">
           <!-- Dome of the rock Building -->
           <a-entity position="0 0 0" shadow="cast: true; receive: true">
               <!-- Base bottom -->
-              <a-entity geometry="primitive: cylinder; height: 3; radius: 9; openEnded: true; segmentsHeight: 1; segmentsRadial: 8;" material="src: #whiteBrick; repeat: 13 3; side: double; wireframe: false;" position="0 0 0"></a-entity>
+              <a-entity geometry="primitive: cylinder; height: 3; radius: 9; openEnded: true; segmentsHeight: 1; segmentsRadial: 8; " material="src: #whiteBrick; repeat: 13 3; side: double; wireframe: false;" position="0 0 0"></a-entity>
 
               <!-- 8 pillar bottom -->
               <a-box material="src: #whiteBrick; repeat: 1 4;" rotation="0 45 0" position="0 0 8.8" depth="0.68" height="3" width="0.68" color="#fff"></a-box>
@@ -596,7 +593,7 @@
           <!-- END Dome of the rock Building -->
 
           <!-- Ground -->
-          <a-plane roughness="1" material="src:#ground; repeat: 512 512; shader: standard" rotation="-90 0 0" position="0 -1.5 0" width="2048" height="2048" shadow="receive: true"></a-plane>
+          <a-plane roughness="1" material="src:#ground; repeat: 512 512; shader: standard" rotation="-90 0 0" position="0 -1.5 0" width="2048" height="2048" shadow="cast:false; receive: true"></a-plane>
 
           <!-- เอา prop วางไว้ที่นี่ -->
 
