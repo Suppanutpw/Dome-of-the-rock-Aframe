@@ -18,12 +18,14 @@
 
     <a-scene shadow="type: pcfsoft">
         <a-sky color="#fff" material="src: #sky360" ></a-sky>
+        <!-- set camera pos here -->
         <a-entity rotation="0 292.5 0" position="-15.025 0 6.225">
             <a-camera position="0 0 0" zoom="0.8"></a-camera>
         </a-entity>
 
-        <a-entity light="type: ambient; intensity: 0.8; color: #fff;"></a-entity>
-        <a-entity light="type: point; intensity: 6; distance: 50; decay: 2; castShadow:true; shadowCameraVisible: false; color: #deeff5;"
+        <!-- sun light -->
+        <a-entity light="type: ambient; intensity: 0.3; color: #FEE4A7;"></a-entity>
+        <a-entity light="type: point; intensity: 0.65; distance: 50; decay: 0.001; castShadow:true; shadowCameraVisible: false; color: #FEE4A7;"
           position="15 25 15" animation="
               property: position;
               to: -15 25 -15;
@@ -142,7 +144,13 @@
                   <a-entity geometry="primitive: cylinder; radius: 1.35; height: 3.125; thetaStart: 0; thetaLength: 180" material="src: #whiteBrick; repeat: 1 1; side: double; wireframe: false; transparent: true;" rotation="0 90 90" position="3.25 1.6 1.5625"></a-entity>
 
                   <!-- door -->
-                  <a-box material="src: #door; repeat: 1 1;" rotation="0 0 0" position="3.28 0 0.005" depth="0.8" height="2.8" width="1.5"></a-box>
+                  <a-box material="src: #door; repeat: 1 1;" rotation="0 0 0" position="3.28 0 0.005" depth="0.6" height="2.8" width="1.5"></a-box>
+
+                  <!-- front door light -->
+                  <a-entity light="type: point; intensity: 0.4; distance: 50; decay: 2; castShadow:true; shadowCameraVisible: false; color: #deeff5;"
+                    position="3.25 1 1.5625">
+                    <a-entity id="directionaltarget" position="3.25 0 1.5625"></a-entity>
+                  </a-entity>
 
                   <!-- END FRONT DOOR -->
 
@@ -183,6 +191,12 @@
 
               <!-- gate object side 2 -->
               <a-entity rotation="0 202.5 0" position="-0.125 0 -8.8" shadow="cast: true">
+                  <!-- building light -->
+                  <a-entity light="type: point; intensity: 2; distance: 50; decay: 2; castShadow:true; shadowCameraVisible: false; color: #deeff5;"
+                    position="3.25 -3 15">
+                    <a-entity id="directionaltarget" position="3.25 20 0"></a-entity>
+                  </a-entity>
+
                   <!-- top bar -->
                   <a-box material="src: #blueBrickDome; repeat: 4 3;" rotation="0 0 0" position="3.255 4 0.125" depth="0.5" height="1" width="7.01"></a-box>
 
@@ -235,6 +249,12 @@
 
               <!-- gate object side 3 -->
               <a-entity rotation="0 112.5 0" position="8.8 0 -0.125" shadow="cast: true">
+                  <!-- building light -->
+                  <a-entity light="type: point; intensity: 2; distance: 50; decay: 2; castShadow:true; shadowCameraVisible: false; color: #deeff5;"
+                    position="3.25 -3 15">
+                    <a-entity id="directionaltarget" position="3.25 20 0"></a-entity>
+                  </a-entity>
+
                   <!-- top bar -->
                   <a-box material="src: #blueBrickDome; repeat: 4 3;" rotation="0 0 0" position="3.255 4 0.125" depth="0.5" height="1" width="7.01"></a-box>
 
@@ -285,8 +305,8 @@
                   <a-box material="src: #blueBrickDome; repeat: 1 4;" rotation="0 0 0" position="6.51 2.5 0.125" depth="0.5" height="2" width="0.5"></a-box>
               </a-entity>
 
-              <!-- gate object side 4 -->
-              <a-entity rotation="0 292.5 0" position="-8.8 0 0.125" shadow="cast: true">'
+              <!-- gate object side 4 front door main -->
+              <a-entity rotation="0 292.5 0" position="-8.8 0 0.125" shadow="cast: true">
                   <!-- FRONT DOOR -->
                   <!-- pillar back -->
 
@@ -327,8 +347,14 @@
                   <!-- dome -->
                   <a-entity geometry="primitive: cylinder; openEnded: true; radius: 1.35; height: 3.125; thetaStart: 0; thetaLength: 180" material="src: #topBlock; repeat: 1 1; side: double; wireframe: false; transparent: true;" rotation="0 90 90" position="3.25 1.6 1.5625"></a-entity>
 
+                  <!-- front door light -->
+                  <a-entity light="type: point; intensity: 0.8; distance: 50; decay: 2; castShadow:true; shadowCameraVisible: false; color: #deeff5;"
+                    position="3.25 3 1.5625">
+                    <a-entity id="directionaltarget" position="3.25 0 1.5625"></a-entity>
+                  </a-entity>
+
                   <!-- door -->
-                  <a-box material="src: #door; repeat: 1 1;" rotation="0 0 0" position="3.28 0 0.005" depth="0.8" height="2.8" width="1.5"></a-box>
+                  <a-box material="src: #door; repeat: 1 1;" rotation="0 0 0" position="3.28 0 0.005" depth="0.6" height="2.8" width="1.5"></a-box>
 
                   <!-- END FRONT DOOR -->
 
@@ -384,6 +410,12 @@
 
               <!-- gate object side 5 -->
               <a-entity rotation="0 67.5 0" position="6.325 0 6.125" shadow="cast: true">
+                  <!-- building light -->
+                  <a-entity light="type: point; intensity: 2; distance: 50; decay: 2; castShadow:true; shadowCameraVisible: false; color: #deeff5;"
+                    position="3.25 -3 15">
+                    <a-entity id="directionaltarget" position="3.25 20 0"></a-entity>
+                  </a-entity>
+
                   <!-- top bar -->
                   <a-box material="src: #blueBrickDome; repeat: 4 3;" rotation="0 0 0" position="3.255 4 0.125" depth="0.5" height="1" width="7.01"></a-box>
 
@@ -436,6 +468,12 @@
 
               <!-- gate object side 6 -->
               <a-entity rotation="0 337.5 0" position="-6.125 0 6.325" shadow="cast: true">
+                  <!-- building light -->
+                  <a-entity light="type: point; intensity: 2; distance: 50; decay: 2; castShadow:true; shadowCameraVisible: false; color: #deeff5;"
+                    position="3.25 -3 15">
+                    <a-entity id="directionaltarget" position="3.25 20 0"></a-entity>
+                  </a-entity>
+
                   <!-- top bar -->
                   <a-box material="src: #blueBrickDome; repeat: 4 3;" rotation="0 0 0" position="3.255 4 0.125" depth="0.5" height="1" width="7.01"></a-box>
 
@@ -488,6 +526,12 @@
 
               <!-- gate object side 7 -->
               <a-entity rotation="0 157.5 0" position="6.125 0 -6.325" shadow="cast: true">
+                  <!-- building light -->
+                  <a-entity light="type: point; intensity: 2; distance: 50; decay: 2; castShadow:true; shadowCameraVisible: false; color: #deeff5;"
+                    position="3.25 -3 15">
+                    <a-entity id="directionaltarget" position="3.25 20 0"></a-entity>
+                  </a-entity>
+
                   <!-- top bar -->
                   <a-box material="src: #blueBrickDome; repeat: 4 3;" rotation="0 0 0" position="3.255 4 0.125" depth="0.5" height="1" width="7.01"></a-box>
 
@@ -540,6 +584,12 @@
 
               <!-- gate object side 8 -->
               <a-entity rotation="0 247.5 0" position="-6.325 0 -6.125" shadow="cast: true">
+                  <!-- building light -->
+                  <a-entity light="type: point; intensity: 2; distance: 50; decay: 2; castShadow:true; shadowCameraVisible: false; color: #deeff5;"
+                    position="3.25 -3 15">
+                    <a-entity id="directionaltarget" position="3.25 20 0"></a-entity>
+                  </a-entity>
+
                   <!-- top bar -->
                   <a-box material="src: #blueBrickDome; repeat: 4 3;" rotation="0 0 0" position="3.255 4 0.125" depth="0.5" height="1" width="7.01"></a-box>
 
@@ -593,7 +643,7 @@
           <!-- END Dome of the rock Building -->
 
           <!-- Ground -->
-          <a-plane roughness="1" material="src:#ground; repeat: 36 36; shader: standard" rotation="-90 0 0" position="0 -1.5 0" width="128" height="128" shadow="cast:false; receive: true"></a-plane>
+          <a-plane roughness="1" material="src:#ground; repeat: 36 36; shader: standard" rotation="-90 0 0" position="0 -1.5 0" width="256" height="256" shadow="cast:false; receive: true"></a-plane>
 
           <!-- เอา prop วางไว้ที่นี่ -->
           <!--trees-->
