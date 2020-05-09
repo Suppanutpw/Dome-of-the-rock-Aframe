@@ -18,8 +18,8 @@
 
     <a-scene shadow="type: pcfsoft">
         <a-sky color="#fff" material="src: #sky360" ></a-sky>
-        <a-entity rotation="0 0 0" position="-15.025 0 6.225"><!--y = 292.5-->
-            <a-camera position="0 50 0" zoom="0.8"></a-camera>
+        <a-entity rotation="0 292.5 0" position="-15.025 0 6.225">
+            <a-camera position="0 0 0" zoom="0.8"></a-camera>
         </a-entity>
 
         <a-entity light="type: ambient; intensity: 0.8; color: #fff;"></a-entity>
@@ -142,7 +142,7 @@
                   <a-entity geometry="primitive: cylinder; radius: 1.35; height: 3.125; thetaStart: 0; thetaLength: 180" material="src: #whiteBrick; repeat: 1 1; side: double; wireframe: false; transparent: true;" rotation="0 90 90" position="3.25 1.6 1.5625"></a-entity>
 
                   <!-- door -->
-                  <a-box material="src: #door; repeat: 1 1;" rotation="0 0 0" position="3.28 0 0.005" depth="0.5" height="2.8" width="1.5"></a-box>
+                  <a-box material="src: #door; repeat: 1 1;" rotation="0 0 0" position="3.28 0 0.005" depth="0.8" height="2.8" width="1.5"></a-box>
 
                   <!-- END FRONT DOOR -->
 
@@ -328,7 +328,7 @@
                   <a-entity geometry="primitive: cylinder; openEnded: true; radius: 1.35; height: 3.125; thetaStart: 0; thetaLength: 180" material="src: #topBlock; repeat: 1 1; side: double; wireframe: false; transparent: true;" rotation="0 90 90" position="3.25 1.6 1.5625"></a-entity>
 
                   <!-- door -->
-                  <a-box material="src: #door; repeat: 1 1;" rotation="0 0 0" position="3.28 0 0.005" depth="0.5" height="2.8" width="1.5"></a-box>
+                  <a-box material="src: #door; repeat: 1 1;" rotation="0 0 0" position="3.28 0 0.005" depth="0.8" height="2.8" width="1.5"></a-box>
 
                   <!-- END FRONT DOOR -->
 
@@ -593,7 +593,7 @@
           <!-- END Dome of the rock Building -->
 
           <!-- Ground -->
-          <a-plane roughness="1" material="src:#ground; repeat: 512 512; shader: standard" rotation="-90 0 0" position="0 -1.5 0" width="2048" height="2048" shadow="cast:false; receive: true"></a-plane>
+          <a-plane roughness="1" material="src:#ground; repeat: 36 36; shader: standard" rotation="-90 0 0" position="0 -1.5 0" width="128" height="128" shadow="cast:false; receive: true"></a-plane>
 
           <!-- เอา prop วางไว้ที่นี่ -->
           <!--trees-->
