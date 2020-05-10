@@ -23,8 +23,8 @@
     <a-scene shadow="type: pcfsoft">
         <a-sky rotation="0 135 0" material="src: #sky360"></a-sky>
         <!-- set camera pos here 292.5-->
-        <a-entity rotation="0 292.5 0" position="-15.025 0 6.225">
-            <a-camera position="0 0 0" zoom="0.8"></a-camera>
+        <a-entity movement-controls="constrainToNavMesh: true; speed: 0.2;" rotation="0 292.5 0" position="-15.025 0 6.225" animation="property: rotation; from: -60 292.5 0; to: 0 292.5 0; dur: 7000; easing: easeInOutQuad;">
+            <a-camera position="0 0 0" zoom="0.8" look-controls="pointerLockEnabled: true;"></a-camera>
         </a-entity>
 
         <!-- code for rotate camera -->
@@ -93,7 +93,7 @@
               <a-entity geometry="primitive: sphere; radius: 6" material="src: #goldDome; repeat: 5 5" color="#ebbf2a" position="0 6 0"></a-entity>
 
               <!-- ก้่านเสาด้านบน -->
-              <a-entity rotation="0 122.5 0" position="0 13 0">
+              <a-entity rotation="0 122.5 0" position="0 13.25 0" scale="2.0">
                 <a-entity position="0 -0.5 0" geometry="primitive: cone; height: 2.5; radiusBottom: 0.1; radiusTop: 0.015" material="color: #fecc2f"></a-entity>
 
                 <a-sphere position="0 -0.95 0" radius="0.15" material="side: double; color: #fecc2f"></a-sphere>
@@ -101,7 +101,7 @@
                 <a-sphere position="0 -0.3 0" radius="0.2" material="side: double; color: #fecc2f"></a-sphere>
                 <a-sphere position="0 0.35 0" radius="0.1" material="side: double; color: #fecc2f"></a-sphere>
 
-                <a-torus position="0 0.92 0" color="#fecc2f" radius="0.15" radius-tubular="0.015"></a-torus>
+                <a-torus position="0 0.92 0" color="#fecc2f" radius="0.2" radius-tubular="0.025"></a-torus>
 
               </a-entity>
 
